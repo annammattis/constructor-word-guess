@@ -3,6 +3,41 @@ var inquirer = require('inquirer');
 var Letter = require('./letter.js');
 var Word = require('./word.js');
 
+var letterArray = "abcdefghijklmnopqrstuvwxyz";
+var houseWordsOfGot = [
+    "As High As Honor",
+    "House Arryn",
+    "Ours Is The Fury",
+    "House Baratheon",
+    "We Do Not Sow",
+    "House Greyjoy",
+    "Hear Me Roar",
+    "House Lannister",
+    "Winter Is Coming",
+    "House Stark",
+    "Fire And Blood",
+    "House Targaryen",
+    "Family Duty Honor",
+    "House Tully",
+    "Unbowed Unbent Unbroken",
+    "House Martell",
+    "Growing Strong",
+    "House Tyrell",
+    "We Stand Together",
+    "House Frey",
+    "Our Blades Are Sharp",
+    "House Bolton",
+    "Here We Stand",
+    "House Mormont",
+    "First In Battle",
+    "House Tarly"
+];
+
+var random = Math.floor(Math.random() * houseWordsOfGot.length);
+var randomOutput = houseWordsOfGot(random);
+var compWord = new Word(randomOutput);
+
+
 
 // Randomly selects a word and uses the Word constructor to store it
 function startGame() {
