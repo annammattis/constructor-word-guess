@@ -41,7 +41,6 @@ var compWord = new Word(randomOutput);
 
 // Randomly selects a word and uses the Word constructor to store it
 function startGame() {
-    var word = new Word("");
 
 }
 
@@ -50,7 +49,7 @@ inquirer.prompt([
     /* Pass your questions in here */
   ]).then(answers => {
     // Use user feedback for... whatever!!
-  });
+  })
 
 // Letter.js should not require any other files.
 Letter(); //???
