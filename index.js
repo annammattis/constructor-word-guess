@@ -37,27 +37,27 @@ var random = Math.floor(Math.random() * houseWordsOfGot.length);
 var randomOutput = houseWordsOfGot(random);
 var compWord = new Word(randomOutput);
 
-var correctLetter = [];
-var incorrectLetter = [];
+var correctAnswer = [];
+var incorrectAnswer = [];
 
 
 
 // Randomly selects a word and uses the Word constructor to store it
 function startGame() {
+  // Prompts the user for each guess and keeps track of the user's remaining guesses
+inquirer.prompt([
+  /* Pass your questions in here */
+]).then(answers => { [
+  type: "input",
+  message: "Choose a letter",
+  name: "userInput"
+];
+  // Use user feedback for... whatever!!
   
+})
 }
 
-// Prompts the user for each guess and keeps track of the user's remaining guesses
-inquirer.prompt([
-    /* Pass your questions in here */
-  ]).then(answers => { [
-    type: "input",
-    message: "Choose a letter",
-    name: "userInput"
-  ];
-    // Use user feedback for... whatever!!
-    
-  })
+
 
 // Letter.js should not require any other files.
 Letter(); //???
