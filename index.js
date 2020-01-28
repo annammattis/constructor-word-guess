@@ -47,11 +47,23 @@ function startGame() {
   // Prompts the user for each guess and keeps track of the user's remaining guesses
 inquirer.prompt([
   /* Pass your questions in here */
-]).then(answers => { [
-  type: "input",
-  message: "Choose a letter",
-  name: "userInput"
-];
+    {
+      type: 'input',
+      message: 'Please enter a letter',
+      name: 'letter'
+    },
+    {
+      type: 'confirm',
+      message: 'Are you sure?',
+      name: 'confirm',
+      default: true
+    }
+  ]).then(answer => {
+    randomOutput.post(answer.letter, (err, data) => {
+      if (err) return console.log(err);
+      console.log(JSON.stringify(data, null, 2));
+    })
+  })
   // Use user feedback for... whatever!!
   
 })
